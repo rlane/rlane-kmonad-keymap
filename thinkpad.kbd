@@ -6,7 +6,7 @@
 
 (defalias
   ces (tap-next esc lctl)
-  superspc (tap-hold-next-release 500 spc (layer-toggle A))
+  spc (tap-hold-next-release 500 spc (layer-toggle space))
   cl C-left  ;; Bash previous-word
   cr C-right  ;; Bash next-word
   shft (tap-next (around-next sft) lsft)
@@ -27,10 +27,10 @@
   tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret
   @ces  a    s    d    f    g    h    j    k    l    ;    '    \
   @shft z    x    c    v    b    n    m    ,    .    /    @shft
-  lctl lmet lalt            @superspc      ralt prnt rctl left up down right
+  lctl lmet lalt            @spc           ralt prnt rctl left up down right
 )
 
-(deflayer A
+(deflayer space
   _     _    _    _    _    _    _    _    _    _    _    _    _    _    _   _
   _     _    _    _    _    _    _    _    _    _    _    _    _    _
   _     _    up   _    _    tab  _    _    _    _    _    _    _    _
