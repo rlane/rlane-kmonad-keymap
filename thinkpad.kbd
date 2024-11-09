@@ -9,6 +9,7 @@
   superspc (tap-hold-next 500 spc (layer-toggle A))
   cl C-left  ;; Bash previous-word
   cr C-right  ;; Bash next-word
+  shft (tap-next (around-next sft) lsft)
 )
 
 (defsrc
@@ -25,7 +26,7 @@
   grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret
   @ces  a    s    d    f    g    h    j    k    l    ;    '    \
-  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  @shft z    x    c    v    b    n    m    ,    .    /    @shft
   lctl lmet lalt            @superspc      ralt prnt rctl left up down right
 )
 
