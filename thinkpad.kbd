@@ -1,0 +1,37 @@
+(defcfg
+  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  output (uinput-sink "My KMonad output")
+  fallthrough true
+)
+
+(defalias
+  ces (tap-next esc lctl)
+  superspc (tap-hold-next 500 spc (layer-toggle A))
+)
+
+(defsrc
+  esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end del
+  grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret
+  caps  a    s    d    f    g    h    j    k    l    ;    '    \
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt            spc            ralt prnt rctl left up down right
+)
+
+(deflayer main
+  esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end del
+  grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret
+  @ces  a    s    d    f    g    h    j    k    l    ;    '    \
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt            @superspc      ralt prnt rctl left up down right
+)
+
+(deflayer A
+  esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end del
+  grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab   q    w    e    r    tab  y    u    i    o    p    [    ]    ret
+  lctl  a    s    d    f    g    left down up  rght  ;    '    \
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt            spc            ralt prnt rctl left up down right
+)
