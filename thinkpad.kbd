@@ -7,6 +7,8 @@
 (defalias
   ces (tap-next esc lctl)
   superspc (tap-hold-next 500 spc (layer-toggle A))
+  cl C-left  ;; Bash previous-word
+  cr C-right  ;; Bash next-word
 )
 
 (defsrc
@@ -31,7 +33,7 @@
   esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end del
   grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab   q    w    e    r    tab  y    u    i    o    p    [    ]    ret
-  lctl  a    s    d    f    g    left down up  rght  ;    '    \
+  lctl  a    s    @cl  @cr  g    home pgdn pgup end  ;    '    \
   lsft  z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt            spc            ralt prnt rctl left up down right
 )
