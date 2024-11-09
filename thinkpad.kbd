@@ -6,7 +6,7 @@
 
 (defalias
   ces (tap-next esc lctl)
-  superspc (tap-hold-next 500 spc (layer-toggle A))
+  superspc (tap-hold-next-release 500 spc (layer-toggle A))
   cl C-left  ;; Bash previous-word
   cr C-right  ;; Bash next-word
   shft (tap-next (around-next sft) lsft)
