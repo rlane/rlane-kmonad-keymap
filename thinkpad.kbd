@@ -18,7 +18,7 @@
   tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret
   caps  a    s    d    f    g    h    j    k    l    ;    '    \
   lsft  z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt            spc            ralt prnt rctl left up down right
+  lctl lmet lalt            spc            ralt sys  rctl left up down right
 )
 
 (deflayer main
@@ -27,7 +27,7 @@
   tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret
   @ces  a    s    d    f    g    h    j    k    l    ;    '    \
   @shft z    x    c    v    b    n    m    ,    .    /    @shft
-  lctl lmet lalt            @spc           ralt prnt rctl left up down right
+  lctl lmet lalt            @spc           ralt sys  rctl left up down right
 )
 
 (deflayer space
