@@ -17,6 +17,7 @@
   xmsc (around (layer-rem mouse) esc)
   xmss (around (layer-rem mouse) space)
   alt (tap-next (around-next alt) alt)
+  pt S-ins
 
   a (tap-hold 200 a #(A XX))
   b (tap-hold 200 b #(B XX))
@@ -97,7 +98,7 @@
 (deflayer space
   _     _    _    _    _    _    _    _    _    _    _    _    _    _    _   _
   _     _    _    _    _    _    _    _    _    _    _    _    _    _
-  _     _    up   _    ret  tab  _    @-   _    _    _    _    _    _
+  _     _    up   _    ret  tab  _    @-   _    _    @pt  _    _    _
   _     left down rght @cl  @cr  home pgdn pgup end  _    _    _
   _     _    _    _    @ms  _    bspc del  _    _    _    _
   _     _    _              _              _    _    _    _    _   _   _
