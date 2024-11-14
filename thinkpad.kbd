@@ -16,6 +16,7 @@
   ms (around (cmd-button "warpd --hint") (layer-add mouse))
   xmsc (around (layer-rem mouse) esc)
   xmss (around (layer-rem mouse) space)
+  alt (tap-next (around-next alt) alt)
 
   a (tap-hold 200 a #(A XX))
   b (tap-hold 200 b #(B XX))
@@ -81,7 +82,7 @@
   tab   @q   @w   @e   @r   @t   @y   @u   @i   @o   @p   @[   @]   ret
   @ces  @a   @s   @d   @f   @g   @h   @j   @k   @l   @;   @'   @\
   @shft @z   @x   @c   @v   @b   @n   @m   @,   @.   @/   @shft
-  lctl lmet lalt            @spc           ralt @asd rctl left up down right
+  lctl  lmet @alt           @spc           @alt @asd rctl left up down right
 )
 
 (deflayer noautoshift
@@ -90,7 +91,7 @@
   tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret
   @ces  a    s    d    f    g    h    j    k    l    ;    '    \
   @shft z    x    c    v    b    n    m    ,    .    /    @shft
-  lctl lmet lalt            @spc           ralt @ase rctl left up down right
+  lctl  lmet @alt           @spc           @alt @ase rctl left up down right
 )
 
 (deflayer space
